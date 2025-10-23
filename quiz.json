@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "id": "5c793f10-26db-42e0-80b7-96a7947e03d6",
+      "title": "Capital of France?",
+      "choices": ["Paris", "London", "Rome"],
+      "goodChoice": "Paris",
+      "points": 10
+    },
+    {
+      "id": "4576d1f1-6f36-4605-bf34-f1913f7d1156",
+      "title": "2 + 2 = ?",
+      "choices": ["2", "4", "5"],
+      "goodChoice": "4",
+      "points": 50
+    },
+    {
+      "id": "c54ab77b-c515-4a7e-99e9-e97f9bc4e673",
+      "title": "5 + 5 = ?",
+      "choices": ["10", "11", "12"],
+      "goodChoice": "10",
+      "points": 20
+    }
+  ]
+}

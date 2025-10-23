@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "id": "7d22b450-2071-481c-9461-36e7ea66e724",
+      "title": "Capital of France?",
+      "choices": [
+        "Paris",
+        "London",
+        "Rome"
+      ],
+      "goodChoice": "Paris",
+      "points": 10
+    },
+    {
+      "id": "18e13cde-31d4-4d28-ab95-5c7d7d46c11a",
+      "title": "2 + 2 = ?",
+      "choices": [
+        "2",
+        "4",
+        "5"
+      ],
+      "goodChoice": "4",
+      "points": 50
+    },
+    {
+      "id": "e72db842-3c0d-4624-a65b-8b3161937e9a",
+      "title": "5 + 5 = ?",
+      "choices": [
+        "10",
+        "11",
+        "12"
+      ],
+      "goodChoice": "10",
+      "points": 20
+    }
+  ],
+  "players": [
+    {
+      "id": "1b323087-1c55-41e5-913f-f971b0dcbc0e",
+      "name": "abc",
+      "score": 100,
+      "point": 80
+    },
+    {
+      "id": "0aa62392-9d51-40c9-a69d-afad4da79456",
+      "name": "john",
+      "score": 66,
+      "point": 70
+    },
+    {
+      "id": "44c3acf3-4eec-4982-a44b-3ed7519ff848",
+      "name": "hellooooo",
+      "score": 33,
+      "point": 10
+    },
+    {
+      "id": "99dd211e-1e0b-42d8-b8d6-c7cb7732b2ca",
+      "name": "okkkk",
+      "score": 66,
+      "point": 70
+    }
+  ]
+}
