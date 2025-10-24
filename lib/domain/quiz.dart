@@ -73,6 +73,7 @@ class Answer{
 class Player {
   final String id;
   final String name;
+  final List<Answer> answers = [];
   int score = 0;
   int point = 0;
 
@@ -87,6 +88,10 @@ class Player {
 
   void updatePoint(int points) {
     this.point += points;
+  }
+
+  void addAnswer(Answer answer) {
+    this.answers.add(answer);
   }
 
   factory Player.fromJson(Map<String, dynamic> json) {
@@ -110,14 +115,9 @@ class Player {
 
 class Quiz{
   List<Question> questions;
-  List <Answer> answers =[];
   List<Player> players = [];
 
   Quiz({required this.questions});
-
-  void addAnswer(Answer answer) {
-     this.answers.add(answer);
-  }
 
   void addPlayer(Player player){
     this.players.add(player);

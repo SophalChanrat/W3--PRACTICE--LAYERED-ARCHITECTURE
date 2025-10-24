@@ -22,10 +22,8 @@ class QuizConsole {
       }
 
       // Add players to the quiz
-      quiz.addPlayer(Player(name: playerName));
-
-      // Player takes quiz
-      List<Answer> playerAnswers = [];
+      Player currentPlayer = Player(name: playerName);
+      quiz.addPlayer(currentPlayer);
 
       for (var question in quiz.questions) {
         print('Question: ${question.title} - (${question.point} points))');
@@ -36,7 +34,7 @@ class QuizConsole {
         // Check for null input
         if (userInput != null && userInput.isNotEmpty) {
           Answer answer = Answer(question: question, answerChoice: userInput);
-          playerAnswers.add(answer);
+          currentPlayer.addAnswer(answer);
         } else {
           print('No answer entered. Skipping question.');
         }
@@ -45,11 +43,11 @@ class QuizConsole {
       }
 
       // Calculate score and points for players
-      quiz.players.last.score = quiz.getScoreInPercentage(playerAnswers);
-      quiz.players.last.point = quiz.getPoint(playerAnswers);
+      currentPlayer.score = quiz.getScoreInPercentage(currentPlayer.answers);
+      currentPlayer.point = quiz.getPoint(currentPlayer.answers);
 
-      print("${quiz.players.last.name}, your score in percentage: ${quiz.players.last.score} %");
-      print("${quiz.players.last.name}, your score in points: ${quiz.players.last.point}");
+      print("${currentPlayer.name}, your score in percentage: ${currentPlayer.score} %");
+      print("${currentPlayer.name}, your score in points: ${currentPlayer.point}");
 
       // Display all players scores
       for (var player in quiz.players) {

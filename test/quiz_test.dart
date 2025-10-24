@@ -18,11 +18,11 @@ main() {
     Answer a1 = Answer(question: q1, answerChoice: "4");
     Answer a2 = Answer(question: q2, answerChoice: "5");
 
-    quiz.answers = [a1, a2];
+    List<Answer> answers = [a1, a2];
 
     // Check something
-    expect(quiz.getScoreInPercentage(quiz.answers), equals(100));
-    expect(quiz.getPoint(quiz.answers), equals(60));
+    expect(quiz.getScoreInPercentage(answers), equals(100));
+    expect(quiz.getPoint(answers), equals(60));
   });
 
   test("Answer are 50% correct 50 points", () {
@@ -30,11 +30,11 @@ main() {
     Answer a1 = Answer(question: q1, answerChoice: "1");
     Answer a2 = Answer(question: q2, answerChoice: "5");
 
-    quiz.answers = [a1, a2];
+    List<Answer> answers = [a1, a2];
 
     // Check something
-    expect(quiz.getScoreInPercentage(quiz.answers), equals(50));
-    expect(quiz.getPoint(quiz.answers), equals(50));
+    expect(quiz.getScoreInPercentage(answers), equals(50));
+    expect(quiz.getPoint(answers), equals(50));
   });
 
   test("Answer are bad 0% 0 points", () {
@@ -42,11 +42,11 @@ main() {
     Answer a1 = Answer(question: q1, answerChoice: "1");
     Answer a2 = Answer(question: q2, answerChoice: "1");
 
-    quiz.answers = [a1, a2];
+    List<Answer> answers = [a1, a2];
 
     // Check something
-    expect(quiz.getScoreInPercentage(quiz.answers), equals(0));
-    expect(quiz.getPoint(quiz.answers), equals(0));
+    expect(quiz.getScoreInPercentage(answers), equals(0));
+    expect(quiz.getPoint(answers), equals(0));
   });
 
   test("Player scores are 100% correct", (){
